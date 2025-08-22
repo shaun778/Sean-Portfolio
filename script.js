@@ -429,7 +429,16 @@ function closeMobileMenu() {
   mobileDropdown.classList.remove('show');
 }
 
-
+// Video 控制 //
+const video = document.querySelector('.h-image video');
+video.muted = true;
+video.loop = true;
+video.playsInline = true;
+video.autoplay = true;
+video.load();  // 重新加載影片
+video.play().catch(error => {
+  console.log('Auto-play prevented:', error);
+});
 
 
 

@@ -74,6 +74,11 @@ h4{
 .mobile-image-wrapper{ 
     display: none; 
 }
+video {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
 
 
 
