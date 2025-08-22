@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean*Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    <header class="main-header">
+        <button class="menu" id="menu-Toggle"></button>
+        <div class="header-container">
+            <a href="index.html"  class="c-logo">
+                 <span class="logo">Sean*Design</span>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                     <li><a href="#project">作品專案</a></li>
+                     <li><a href="#product-ex">我的服務</a></li>
+                     <li><a href="#">關於我</a></li>
+                </ul>
+            </div>
+            <div class="resume">
+                <a class="a-resume" href="">下載履歷</a>
+            </div>
+        </div>
+        <div class="mobile-dropdown-menu" id="mobileDropdownMenu">
+          <ul>
+              <li><a href="#project" onclick="closeMobileMenu()">作品專案</a></li>
+              <li><a href="#product-ex" onclick="closeMobileMenu()">我的服務</a></li>
+              <li><a href="#" onclick="closeMobileMenu()">關於我</a></li>
+              <li class="resume-item"><a href="" onclick="closeMobileMenu()">下載履歷</a></li>
+          </ul>
+        </div>
+    </header>
+    <main>
+    <section class="hero-image">
+        <div class="h-image">
+              <video src="images/hero-glass.mov" autoplay loop muted playsinline></video>
+        </div>
+    <div class="hero-intro">
+        <div class="hero-title">
+            <div class="header-style">我是一名注重以人為本的<br>使用體驗設計師 *</div>
+            <div class="header-content">UI、UXD、人機介面準則、易用性原則、響應式設計、無障礙設計。</div>
+        </div>
+    </div>
+    </section>
+
+<!-- Project -->
+    <section class="project" id="project">
+          <h1>作品專案</h1>
+          <div class="project-slider">
+             <span class="slider-info">1/6</span>
+                 <div class="slider-btn-group">
+                     <button class="slider-btn prev" aria-label="上一張">
+                        <img src="images/icon-left-arrow.svg" alt="icon-left-arrow">
+                     </button>
+                     <button class="slider-btn next" aria-label="下一張">
+                        <img src="images/icon-right-arrow.svg" alt="icon-right-arrow">
+                     </button>
+                 </div>
+          </div>
+        <div class="project-group">
+            <a class="p-item" href="project-detail-1.html" target="_blank">
+              <img src="images/h-project1.jpg" alt="優化找尋空間的體驗">
+              <p>Happ.小樹屋 “搜尋空間功能”</p>
+              <h3>優化找尋空間的使用體驗</h3>
+              <div class="chip-group">
+                 <div class="chip">
+                 <span class="chip-label">UI</span>
+                 </div>
+                 <div class="chip">
+                 <span class="chip-label">RWD</span>
+                 </div>
+              </div>
+            </a>
+            <a class="p-item" href="project-detail-1.html" target="_blank">
+              <img src="images/h-project2.jpg" alt="將複雜的資訊整合，改善至符合易用型原則">
+              <p>Happ. 小樹屋 “我的預訂”</p>
+              <h3>將複雜的資訊整合，改善至符合易用型原則</h3>
+              <div class="chip-group">
+                 <div class="chip">
+                 <span class="chip-label">UI</span>
+                 </div>
+                 <div class="chip">
+                 <span class="chip-label">RWD</span>
+             </div>
+                </div>
+            </a>
+            <a class="p-item" href="project-detail-1.html" target="_blank">
+              <img src="images/h-project3.jpg" alt="協助指標設計的視覺圖像">
+              <p>Happ. 小樹屋 “空間指標系統設計”</p>
+              <h3>協助指標設計的視覺圖像</h3>
+              <div class="chip-group">
+                 <div class="chip">
+                  <span class="chip-label">UI</span>
+                 </div>
+                 <div class="chip">
+                  <span class="chip-label">RWD</span>
+                 </div>
+                 <div class="chip">
+                  <span class="chip-label">Signage System Design</span>
+                 </div>
+             </div>
+            </a>
+        </div>
+    </section>
+
+<!-- Product-ex -->
+    <section class="product-ex" id="product-ex">
+        <div class="product01">
+            <div class="pr-info">
+                <h1>5 年的產品設計經驗</h1>
+                <h3>在專裡主要負責領，使用者介面、經驗任務</h3>
+                  <div class="chip-group">
+                      <div class="chip">O2O</div>
+                      <div class="chip">Responsive Web Design</div>
+                      <div class="chip">Figma</div>
+                      <div class="chip">VScode</div>
+                  </div>
+             </div>
+            <div class="pr-image">
+                <canvas id="myRadar" width="600" height="600"></canvas>
+            </div>
+        </div>
+        <div class="faq-flex">
+            <div class="faq-question">
+                <div class="faq-content">
+                     <div class="faq-title">
+                      UI Design
+                     </div>
+                     <i class="f-icon">
+                      <img src="images/icon-angle-down.svg" alt="icon-angle-down">
+                     </i>
+                </div>
+                <div class="faq-answer">
+                    <p>人機介面準則、十大易用性原則、Wireframe、Mockup、Prototype、UI Guideline、RWD、Design System、Component、UI Chats</p>
+                    <!-- （此處填答案內容） -->
+                </div>
+            </div>
+
+            <div class="faq-question">
+                <div class="faq-content">
+                     <div class="faq-title">
+                      Accessible design
+                     </div>
+                     <i class="f-icon">
+                      <img src="images/icon-angle-down.svg" alt="icon-angle-down">
+                     </i>
+                </div>
+                <div class="faq-answer">
+                    <p>Perceivable (可感知)、Operable (可操作)、Understandable (可理解)、Robust (穩健)</p>
+                    <!-- （此處填答案內容） -->
+                </div>
+            </div>
+            <div class="faq-question">
+                <div class="faq-content">
+                     <div class="faq-title">
+                      前端語言
+                     </div>
+                     <i class="f-icon">
+                      <img src="images/icon-angle-down.svg" alt="icon-angle-down">
+                     </i>
+                </div>
+                <div class="faq-answer">
+                    <p>HTML&CSS、Grid、FlexBox、RWD</p>
+                    <!-- （此處填答案內容） -->
+                </div>
+            </div>
+            <div class="faq-question">
+                <div class="faq-content">
+                     <div class="faq-title">
+                      AI
+                     </div>
+                     <i class="f-icon">
+                      <img src="images/icon-angle-down.svg" alt="icon-angle-down">
+                     </i>
+                </div>
+                <div class="faq-answer">
+                    <p>Vide coding 產出 Prototype 簡化設計流程提供討論</p>
+                    <!-- （此處填答案內容） -->
+                </div>
+            </div>
+
+           
+        </div>
+    </section>
+
+
+<!-- // container -->
+     <!-- 主要內容 -->
+    <div class="container">
+        <div class="content-section">
+            <!-- 左側固定圖片框架 -->
+            <div class="image-container">
+                    <!-- 第一張圖片 -->
+                    <div class="image-slide active" id="image-0">
+                        <img src="images/h-project1.jpg" class="fill" alt="產品經理合作目標" style="clip-path:  inset(0%)">
+                    </div>
+                    <!-- 第二張圖片 -->
+                    <div class="image-slide" id="image-1">
+                        <img src="images/h-project2.jpg" class="fill" alt="進行團隊與設計討論"  style="clip-path:  inset(0%)">
+                    </div>
+                    <!-- 第三張圖片 -->
+                    <div class="image-slide" id="image-2">
+                        <img src="images/team3.jpg" class="fill" alt="交付設計並測試" style="clip-path:  inset(0%);">
+                    </div>
+                    
+                    <!-- 圖片說明文字 -->
+                    <div class="image-caption active" id="caption-0">產品經理合作目標</div>
+                    <div class="image-caption" id="caption-1">進行團隊與設計討論</div>
+                    <div class="image-caption" id="caption-2">交付設計並測試</div>
+            </div>
+
+            <!-- 右側滾動文字 -->
+            <div class="text-container">
+                <!-- 第一個主題 -->
+                <div class="w-layout-vflex text-section" data-theme="0">
+                    <div class="mobile-image-wrapper">
+                       <img src="images/team1.jpg" alt="產品經理合作目標" class="mobile-image">
+                    </div>
+                    <h2>產品經理合作目標</h2>
+                    <h4>PM 會把要改動的目標文件（ORK、PRD） 與我進行討論，並且我會提出關於使用者在介面上操作的意見，或是整段流程操作的合理性
+                    <br>透過簡易的想法繪製成草稿 Wireframe 進一步進行共識</h4>
+                </div>
+
+                <!-- 第二個主題 -->
+                <div class="w-layout-vflex text-section" data-theme="1">
+                    <div class="mobile-image-wrapper">
+                       <img src="images/team1.jpg" alt="產品經理合作目標" class="mobile-image">
+                    </div>
+                    <h2>進行團隊與設計討論</h2>
+                    <h4>有了明確的草稿 Wireframe 定案，接下來將執行的操搞規劃出 Mockup 達到高保真畫面
+                    <br>再次與 PM 討論最終畫面成果，在進入開發前，請前端大致上審視稿件，並提出問題進行溝通</h4>
+                </div>
+
+                <!-- 第三個主題 -->
+                <div class="w-layout-vflex text-section" data-theme="2">
+                    <div class="mobile-image-wrapper">
+                       <img src="images/team1.jpg" alt="產品經理合作目標" class="mobile-image">
+                    </div>
+                    <h2>交付設計並協助測試</h2>
+                    <h4>清楚交代畫面的流程（Component、RWD、Flow）幫助前端順利開發
+                    <br>協助 QA 品質測試，確保上線前與設計稿相符</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+ <!-- User-carousel    -->
+    <section class="user-carousel">
+        <h2>來自於合作夥伴的回饋</h2>
+       <div class="feedback-container">
+        <div class="carousel-track">
+              <div class="feedback-group-wrapper current"></div>
+              <div class="feedback-group-wrapper next"></div>
+          </div>
+
+          <div class="controls">
+              <div class="dots"></div>
+              <div class="arrows">
+                  <button id="prevBtn">
+                    <img src="images/icon-left-arrow.svg" alt="icon-left-arrow">
+                  </button>
+                  <button id="nextBtn">
+                    <img src="images/icon-right-arrow.svg" alt="icon-right-arrow">
+                  </button>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+<!-- FAQ -->
+    <section class="faq">
+        <h1>常見問題</h1>
+        <div class="faq-container">
+            <div class="faq-flex">
+
+               <div class="faq-question">
+                <div class="faq-content">
+                     <div class="faq-title">
+                      您遇到持不同意見時是如何處理？
+                     </div>
+                     <i class="f-icon">
+                      <img src="images/icon-angle-down.svg" alt="icon-angle-down">
+                     </i>
+                </div>
+                <div class="faq-answer">
+                    <p>您遇到持不同意見時是如何處理？</p>
+                    <!-- （此處填答案內容） -->
+                </div>
+            </div>
+
+               <div class="faq-question">
+                <div class="faq-content">
+                     <div class="faq-title">
+                      您遇到持不同意見時是如何處理？
+                     </div>
+                     <i class="f-icon">
+                      <img src="images/icon-angle-down.svg" alt="icon-angle-down">
+                     </i>
+                </div>
+                <div class="faq-answer">
+                    <p>您遇到持不同意見時是如何處理？</p>
+                    <!-- （此處填答案內容） -->
+                </div>
+            </div>
+
+               <div class="faq-question">
+                <div class="faq-content">
+                     <div class="faq-title">
+                      您遇到持不同意見時是如何處理？
+                     </div>
+                     <i class="f-icon">
+                      <img src="images/icon-angle-down.svg" alt="icon-angle-down">
+                     </i>
+                </div>
+                <div class="faq-answer">
+                    <p>您遇到持不同意見時是如何處理？</p>
+                    <!-- （此處填答案內容） -->
+                </div>
+            </div>
+
+               <div class="faq-question">
+                <div class="faq-content">
+                     <div class="faq-title">
+                      您遇到持不同意見時是如何處理？
+                     </div>
+                     <i class="f-icon">
+                      <img src="images/icon-angle-down.svg" alt="icon-angle-down">
+                     </i>
+                </div>
+                <div class="faq-answer">
+                    <p>您遇到持不同意見時是如何處理？</p>
+                    <!-- （此處填答案內容） -->
+                </div>
+            </div>
+
+            </div>
+            <div class="faq-image">
+                <video src="images/hero-glass2.mov" autoplay loop muted playsinline></video>
+            </div>
+        </div>
+    </section>
+
+
+<!-- AD-bar -->
+    <section class="ad-bar">
+        <div class="ad-inner">
+          <strong>Accessible design❞</strong>
+          <strong>Accessible design❞</strong>
+          <strong>Accessible design❞</strong>
+          <strong>Accessible design❞</strong>
+          <strong>Accessible design❞</strong>
+        </div>
+    </section>
+    
+
+
+<!-- Section-footer -->
+    <div class="section-footer">
+        <div class="email-group">
+            <h3>歡迎談談設計方面的需求</h3>
+            <div class="email">
+                <h2>cemiah777@gmail.com</h2>
+                  <i class="icon">
+                      <img src="images/icon-copy.svg" alt="icon-copy">
+                  </i>
+            </div>
+             </div>
+            <div class="footer-info">
+                <div class="f-info">
+                    <h3>作區專區</h3>
+                    <p>小樹屋搜尋空間功能</p>
+                    <p>小樹屋我的預訂服務</p>
+                    <p>小樹屋品牌系統設計</p>
+                </div>
+                <div class="f-info">
+                    <h3>快速查看</h3>
+                    <p>首頁</p>
+                    <p>作品專案</p>
+                    <p>5 年的產品設計經驗</p>
+                    <p>經常與團隊的合作方式</p>
+                    <p>來自於合作夥伴的回饋</p>
+                    <p>常見問題</p>
+                </div>
+            </div>
+    </div>
+
+ <!-- Footer -->
+    <footer>
+        <p>© 2025 Sean. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    </main>
+</body>
+</html>

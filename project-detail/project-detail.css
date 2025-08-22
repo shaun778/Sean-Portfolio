@@ -1,0 +1,228 @@
+
+
+/* Project-detail-1 */
+.s-solution02, .d-process, .design01, .design02, .design03, .design04{
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+.s-solution01{
+    display: grid;
+    gap: 4rem;
+    margin-bottom: 5rem;
+} 
+.project-header{
+    padding: 60px 80px 60px;
+    background-color: #FDFDFD;
+}
+.project-title{
+    display: grid;
+    gap: 0.125rem;
+}
+.project-title h3{
+    color: #6a6a6a;
+}
+.f-icon{
+    width: 32px;
+    height: 32px;
+}
+.story-project{
+    display: flex;
+    gap: 5rem;
+    padding: 0 80px 80px 80px;
+    width: 100%;
+}
+.team-info-board{
+    display: grid;
+    gap: 1.75rem;
+    max-width: 25%;
+    border: 1px solid #D9D9D9;
+    border-radius: 0.625rem;
+    padding: 1.75rem;
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+    height: fit-content;   /* 讓內容高度正常，不強制撐滿 */
+    z-index: 1;           /* 保證不被主內容蓋住 */
+}
+.team-info-board h4{
+    color: #6a6a6a;
+}
+.progress-bar-bg {
+  width: 100%;
+  height: 10px;
+  background: #D9D9D9;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: #000;
+  border-radius: 100px;
+  width: 0%; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.2s;
+}
+
+
+
+/* Main story */
+.main-story{
+    display: grid;
+    /* flex: 0 0 80%;
+    max-width: 80%; */
+}
+.story-container{
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 4rem;
+}
+.story-container ul{
+    display: grid;
+    padding-left: 1.25rem;
+    gap: 0.75rem;
+}
+.story-container h4, li, p{
+    color: #6a6a6a;
+}
+.story-container img{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.625rem;
+    border: 1px solid #D9D9D9;
+}
+.story-content{
+    display: grid;
+    gap: 0.75rem;
+}
+.s-image-groupe01{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.125rem;
+}
+.s-image-groupe01 img{
+    height: 200px;
+}
+.s-image-groupe02{
+    display: grid;
+    gap: 1.125rem;
+}
+.s-image1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.125rem;
+    width: 100%;
+}
+.design01 video, .design02 video, .design03 video{
+    border: 1px solid #D9D9D9;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 0.625rem;
+}
+.design04{
+    display: grid;
+    gap: 3rem;
+}
+.s-image-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+.s-image-info{
+    display: grid;
+    gap: 1.125rem;
+}
+.s-image-info img{
+    height: 300px;
+}
+.s-image-other{
+    display: grid;
+    grid-column: 1 / span 2;
+    gap: 1.125rem;
+}
+.s-image-other img{
+    height: 300px;
+}
+
+
+
+@media screen and (max-width: 375px){
+    .story-content h1, .s-problem h1, .s-solution01 h1, 
+    .s-solution02 h1, .d-process h1, .design01 h1, .design02 h1, 
+    .design03 h1, .design04 h1{
+        font-size: 1.75rem;
+    }
+    .story-container{
+        gap: 3rem;
+    }
+    .s-solution01, .s-solution02,.d-process, .design01, .design02, .design03, .design04{
+        margin-bottom: 3rem;
+    }
+    .design01 video, .design02 video, .design03 video{
+        height: 200px;
+    }
+    .s-image-group{
+        gap: 1rem;
+    }
+    .s-image-info{
+        margin-bottom: 2rem;
+    }
+    .s-image-info p, .s-image-other p{
+        font-size: 0.75rem;
+    }
+    .s-image-info img, .s-image-other img{
+        height: 100px;
+    }
+    .project-header{
+        padding: 24px;
+    }
+    .project-header h1{
+        font-size: 1.75rem;
+    }
+    .project-header h3{
+        font-size: 0.875rem;
+    }
+    .story-project{
+        display: grid;
+        padding: 24px;
+    }
+    .team-info-board {
+        max-width: 100%; 
+        background-color: #ffffff;          
+        border-radius: 0;          
+        border-left: none;         
+        border-right: none;        
+        padding-left: 0;
+        padding-right: 0;             
+        top: 80px;                    
+        transition: all 0.3s ease; 
+    }
+    .team-info-board.scrolled .responsible,
+    .team-info-board.scrolled .scope,
+    .team-info-board.scrolled .team-working,
+    .team-info-board.scrolled .spaned-time {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+.team-info-board.scrolled {
+    gap: 0;                           /* 原本: 1.75rem */
+    padding: 0.75rem 0rem;           /* 縮小 padding */
+    border-bottom: 1px solid #D9D9D9; /* 新增底線 */
+}
+
+.team-info-board.scrolled .progress-block {
+    margin: 0;                        /* 移除 margin */
+}
+
+
+}
