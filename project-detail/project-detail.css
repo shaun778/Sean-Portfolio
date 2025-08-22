@@ -119,7 +119,7 @@
     width: 100%;
 }
 .design01 video, .design02 video, .design03 video{
-    
+    border: 1px solid #D9D9D9;
     width: 100%;
     height: 600px;
     object-fit: cover;
