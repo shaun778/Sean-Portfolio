@@ -81,12 +81,6 @@ video {
     background: none !important;
     -webkit-border: none !important;
     -webkit-box-shadow: none !important;
-    -webkit-appearance: none;
-}
-video:focus, video:active {
-    outline: none !important;
-    border: none !important;
-    box-shadow: none !important;
 }
 
 
