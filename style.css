@@ -81,6 +81,7 @@ video {
     background: none !important;
     -webkit-border: none !important;
     -webkit-box-shadow: none !important;
+    -webkit-appearance: none !important; /* iOS 支援 */
 }
 
 
@@ -699,13 +700,13 @@ footer{
     }
     .mobile-image-wrapper{ 
         display: block; 
-        margin-bottom: 16px; 
         text-align: center; 
     }
     .mobile-image{ 
-        width: 80vw; 
+        width: 100%; 
         max-width: 100%; 
         height: 15vh; 
+        margin-bottom: 0.875rem;
         border-radius: 8px;
     }
 
@@ -715,19 +716,23 @@ footer{
     .hero-image{
         padding-bottom: 48px;
     }
+    .hero-title{
+        display: grid;
+        gap: 0.5rem;
+    }
     .header-style{
-        font-size: 0.75rem;
+        font-size: 1.75rem;
         text-align: start;
     }
     .header-content{
-        font-size: 0.5rem;
+        font-size: 0.875rem;
         padding-top: 0.2rem;
         text-align: start;
     }
     .h-image{
         height: 30vh auto;
     }
-    .h-image img{
+    .h-image video{
         width: 100%;
         height: 100%;
     }
@@ -1004,6 +1009,7 @@ footer{
         position: sticky;
         margin: 0 auto 20px;
         padding: 30px 20px;
+        grid-row-gap: 0.875rem;
         height: auto;
         min-height: 400px;
         background: white;
@@ -1024,7 +1030,6 @@ footer{
     }
     .text-section h2 {
         font-size: 1.3rem;
-        margin-bottom: 1.5rem;
     }
     .text-section li {
         font-size: 0.9rem;
