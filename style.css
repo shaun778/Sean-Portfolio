@@ -114,6 +114,7 @@ video {
     display: flex;
     flex-direction: column;
     padding: 1.125rem 0;
+    gap: 0.75rem;
 }
 .faq-content{
     display: flex;
@@ -143,6 +144,7 @@ video {
 .faq-answer{
     /* 答案預設隱藏 */
     max-height: 0;
+    padding-right: 1.175rem;
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.4s cubic-bezier(.4,0,.2,1), 
@@ -649,10 +651,19 @@ header a:hover{
     grid-row-gap: 0.875rem;
     flex-direction: column;
 }
-.f-info p{
+.f-info li, a{
+    list-style: none;
+    text-decoration: none;
+}
+.f-info ul{
+    display: grid;
+    gap: 0.75rem;
+}
+.f-info a{
     font-size: 0.875rem;
     color: #6a6a6a;
 }
+
 
 
 
