@@ -318,8 +318,9 @@ header a:hover{
 }
 .p-item img{
     width: 100%;
-    height: auto;
+    height: 25vh;
     border-radius: 4px;
+    object-fit: cover;
 }
 .card-content{
     display: flex;
@@ -615,12 +616,11 @@ header a:hover{
     width: 100%;
     padding: 28px 0;
     background-color: black;
-    gap: 40px;
     overflow: hidden;
 }
 .ad-inner{
     display: flex;
-    gap: 40px;
+    gap: 3.75rem;
     width: max-content;
     will-change: transform;
 }
@@ -947,6 +947,9 @@ footer{
     }
     .card-title h2{
         font-size: 1.5rem;
+    }
+    .story-container img{
+         height: 20vh !important;
     }
 
 
