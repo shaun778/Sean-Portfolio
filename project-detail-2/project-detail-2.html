@@ -6,6 +6,7 @@
     <title>Sean*Design</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../project-detail/project-detail.css">
+    <link rel="stylesheet" href="project-detail-2.css">
 </head>
 <body>
   <main>
@@ -80,16 +81,19 @@
              <img src="images/iPhone-mockup01 .jpeg" alt="project1">
              <div class="story-content">
               <h1>故事背景</h1>
-              <h4>使用者時常反應『搜尋上很難找空間、不知道如何快速尋找、沒有捷運線』導致頻頻遇到阻礙，藉此需要從整個搜尋的功能架構檢視。</h4>
+              <h4>小樹屋網站裡的『我的預定』為使用者最常使用的功能，易用性與使用體驗上出現了操作與辨識的問題，為了維護品牌的體驗藉此提出需要改善。</h4>
              </div>
              <div class="s-problem">
                 <div class="story-content">
                   <h1>關鍵問題</h1>
-                  <h4>PM 原本在這個期間有個計畫要執行，就是將使用者常點擊的標籤來設計搜尋，但考量只呈現『標籤』給於使用者，會無法快速地找到目標，基於易用性原則的考量，需要遵循『使用者當下需要做什麼？』最終討論執行 A/B Testing 來看使用者的反應來做決定。</h4>
+                  <h4>改善的核心除了遵循『易用性原則、無障礙設計、人機介面準則』之外，唯一不確定性的是預訂空間的用戶操作習慣，所以需要藉由數據觀察來驗證行為。
+                    <br>
+                      客戶成功部門同事，對於『人機介面準則』設計方式感到懷疑。
+                  </h4>
                   <ul>
-                      <li>我們是真的在解決使用者的問題嗎？</li>
-                      <li>使用者真的需要這麼多功能嗎？</li>
-                      <li>那些功能對於現在高密度的使用有益處？</li>
+                      <li>遵循了使用體驗原則後，如何驗證特別功能用戶的行為？</li>
+                      <li>該用什麼數據方法來驗證用戶？</li>
+                      <li>如何向提出疑問的人，提出解釋？</li>
                   </ul>
                 </div>
              </div>
@@ -98,35 +102,31 @@
                 <div class="story-content">
                  <h1>解決方法</h1>
                  <ul>
-                     <li>A 版本：保留城市＆區域選擇，確保使用者有基本的選項</li>
-                     <li>B 版本：添加所有設備、情境、城市、捷運標籤，讓使用者自由點擊</li>
-                     <li>遵循易用性原則：使用者當下需要做什麼？</li>
-                     <li>執行 A/B Testing</li>
+                     <li>使用 Clarity 觀察用戶的行為：熱點圖、操作行為</li>
+                     <li>使用 UX 機構提出的循漸披露來進行設計</li>
+                     <li>遵循人機介面準則設計</li>
+                     <li>向提出疑問的人進行溝通</li>
                  </ul>
                 </div>
                 <div class="s-image-groupe01">
-                    <img src="" alt="">
-                    <img src="images/planB.jpg" alt="planb">
+                    <img src="images/old-design.jpg" alt="old-design">
                 </div>
              </div>
 
              <div class="s-solution02">
                 <div class="story-content">
-                 <h1>A/B Testing</h1>
-                 <h4>我們為期 30 日的兩個版本測試，使用者的明顯反饋是『城市區域、捷運』很重要，透過數據出來結果，最終決定我們的版本。</h4>
+                 <h1>Clarity 數據觀察</h1>
+                 <h4>為期 30 日透過介面上的熱點圖觀察用戶的使用狀況，來進行是否要進一步的刪減，來決定那些資訊需要先顯示給用戶。</h4>
                  <ul>
-                     <li>A 版本：城市點擊率（21,865）、行政區（23,808）</li>
-                     <li>B 版本：用戶點擊率（11,200）</li>
+                     <li>照片：1272 Clicks (5.84%)</li>
+                     <li>密碼＆加時功能：1004 Clicks (4.55%)</li>
+                     <li>訂單資訊：895 Clicks (4.06%)</li>
+                     <li>空間標題：618 Clicks (2.84%)</li>
                  </ul>
-                 <p>＊點擊最多的為『捷運站、城市』</p>
                 </div>
                 <div class="s-image-groupe02">
-                    <div class="s-image1">
-                      <img src="images/CSAT1.jpg" alt="csat1">
-                      <img src="images/CSAT2.jpg" alt="csat2">
-                    </div>
                     <div class="s-image2">
-                        <img src="images/CSAT3.jpg" alt="csat3">
+                        <img src="images/clarity01.jpg" alt="clarity01">
                     </div>
                 </div>
              </div>
@@ -134,19 +134,25 @@
              <div class="d-process">
                 <div class="story-content">
                   <h1>設計過程</h1>
-                  <h4>這次的任務為改善『使用者的操作與體驗』遵循幾個原則『讓用戶隨時知道系統在做什麼、畫面簡單不複雜、用大家聽得懂的語言』，無障礙設計則是『可感知、可理解』</h4>
+                  <h4>用戶想要簡單，他們沒有時間足夠深入地學習大量功能，來選擇最適合他們需求的少數功能，所以運用了 Nielsen Norman Group - 尼爾森諾曼集團，
+                    <a href="https://www.nngroup.com/articles/progressive-disclosure/">Progressive Disclosure</a> 中指出的『循漸披露』
+                    <ul>
+                      <li>一開始，只向使用者顯示幾個最重要的選項</li>
+                      <li>根據要求提供更多的專業選項，只有在用戶要求時才披露這些次要功能，大多數用戶可以繼續執行他們的任務，而不必擔心這種增加的複雜性。</li>
+                  </ul>
+                  </h4>
                </div>
                  <img src="images/team3.jpg" alt="">
              </div>
 
              <div class="design01">
                 <div class="story-content">
-                  <h1>預設區塊-城市選擇設計</h1>
-                  <h4>展開搜尋預設主要城市『台北、新北、台南、台中、基隆』讓使用者了解，據點最多幾個大城市。</h4>
+                  <h1>人機介面準則 - Cards</h1>
+                  <h4>將複雜的資訊設計成卡片樣式，卡片可以顯示單一主題的內容和動作。</h4>
                   <ul>
-                      <li>UI：視覺化的板塊</li>
-                      <li>易用性－連結現實中的認知：台灣地圖的插圖呈現</li>
-                      <li>無障礙設計：可點擊操作、可理解的設計</li>
+                      <li>使用卡片來顯示單一主題的內容和動作</li>
+                      <li>卡片應該易於閱讀以獲取相關且可操作的資訊</li>
+                      <li>文字和圖像等元素應以明確指示層次結構的方式放置在卡片上</li>
                   </ul>
                 </div>
                 <video src="images/main-city.mp4" alt="預設選擇城市" autoplay loop muted playsinline></video>
@@ -154,7 +160,7 @@
 
              <div class="design02">
                 <div class="story-content">
-                 <h1>行政區選擇設計</h1>
+                 <h1>資訊架構整理</h1>
                  <h4>依據重要優先順序排列，城市 > 行政區 > 其他，將次要的選項設計成模組化，使用者要選擇自己所在的區域時，就會看到預設的基本模組，並以 Tab + Chip 的 UI 結合，讓使用能對主要的城市切換不同選項，呈現不同的行政區</h4>
                  <ul>
                      <li>Tab</li>
@@ -162,24 +168,27 @@
                      <li>一致性、模組化</li>
                  </ul>
                 </div>
-                <video src="images/main-location.mp4" alt="行政區域選擇" autoplay loop muted playsinline></video>
+                <img src="images/clarity-after01.jpg" alt="clarity-after01" >
+                <img src="images/clarity-after02.jpg" alt="clarity-after02" >
              </div>
 
               <div class="design03">
                 <div class="story-content">
-                  <h1>台北捷運選擇</h1>
-                  <h4>小樹屋的用戶佔比最多為『台北市』用戶最常反映希望以台北捷運為錨點，習慣以捷運來找空間，因此將『只有在捷運線上小樹屋』提供使用的選擇，以免使用者點擊之後沒有如實呈現</h4>
-                  <ul>
-                      <li>台北市用戶最常錨定的目標</li>
-                      <li>只提供有空間的選項</li>
-                  </ul>
+                  <h1>設計完成</h1>
+                </div>
+                <img src="images/new-design.jpg" alt="new-design">
+             </div>
+
+             <div class="design03">
+                <div class="story-content">
+                  <h1>響應式設計</h1>
                 </div>
                 <video src="images/main-metro.mp4" alt="台北捷運選擇" autoplay loop muted playsinline></video>
              </div>
 
              <div class="design04">
                 <div class="story-content">
-                  <h1>搜尋功能</h1>
+                  <h1>為什麼會使用循漸披露設計呢？</h1>
                   <h4>根據『人機介面準則』搜尋功能需要包含幾項原則，當使用者在進行搜尋時，能輕鬆地使用產品功能，大幅減少使用者阻礙</h4>
                   <ul>
                       <li>搜尋紀錄</li>

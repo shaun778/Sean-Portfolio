@@ -169,7 +169,10 @@
         height: 200px;
     }
     .s-image-group{
+        display: block;
         gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
     }
     .s-image-info{
         margin-bottom: 2rem;
