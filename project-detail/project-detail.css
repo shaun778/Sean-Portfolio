@@ -29,7 +29,7 @@
 .story-project{
     display: flex;
     gap: 5rem;
-    padding: 0 80px 80px 80px;
+    padding: 0 80px 0px 80px;
     width: 100%;
 }
 .team-info-board{
@@ -91,7 +91,7 @@
 }
 .story-container img{
     width: 100%;
-    height: 40vh;
+    height: auto;
     object-fit: cover;
     display: block;
     border-radius: 0.625rem;
@@ -107,7 +107,7 @@
     gap: 1.125rem;
 }
 .s-image-groupe01 img{
-    height: 200px;
+    height: auto;
 }
 .s-image-groupe02{
     display: grid;
@@ -151,6 +151,45 @@
     height: 300px;
 }
 
+
+/* Next-project */
+.next-project{
+    padding: 80px 120px;
+}
+.next-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: auto;
+}
+.next-grid{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 28px 48px;
+    border: 1px solid #D9D9D9;
+    border-radius: 0.625rem;
+}
+.next-arrow{
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+.next-arrow h3{
+    color: #6a6a6a;
+}
+.next-right{
+    opacity: 1;
+}
+.next-item{
+    text-align: right;
+}
+.next-item h1{
+    color: #000;
+}
 
 
 @media screen and (max-width: 375px){
@@ -227,6 +266,30 @@
 .team-info-board.scrolled .progress-block {
     margin: 0;                        /* 移除 margin */
 }
+.next-project{
+    padding: 20px 24px 60px 24px;
+}
+.next-container{
+    display: block;
+}
+.next-grid{
+    padding: 28px 18px;
+}
+.next-item h1{
+    font-size: 1.75rem;
+}
+.next-item h3{
+    font-size: 0.875rem;
+}
+}
 
-
+@media (hover: hover){
+    .next-grid:hover{
+        border-color: #000;
+        transition: transform 0.3s ease;
+        transform: scale(1.05); 
+    }
+    .next-right:hover{
+        color: #ffffff;
+    }
 }
