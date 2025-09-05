@@ -50,3 +50,29 @@ function handleMobileSticky() {
 }
 
 
+// 圖片點擊展開 // 
+document.addEventListener('DOMContentLoaded', () => {
+  const popup = document.querySelector('.img-popup');
+  const popupImg = popup.querySelector('img');
+  const closeBtn = popup.querySelector('.close-btn');
+
+  document.querySelectorAll('.zoom-icon').forEach(icon => {
+    icon.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const imgSrc = this.getAttribute('data-img-src');
+      popupImg.src = imgSrc;
+      popup.classList.add('active');
+    });
+  });
+
+  closeBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    popup.classList.remove('active');
+  });
+
+  popup.addEventListener('click', function() {
+    popup.classList.remove('active');
+  });
+});
+
+

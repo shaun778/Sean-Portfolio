@@ -394,6 +394,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
 /* Ad-bar 自動輪播*/
 const adInner = document.querySelector('.ad-inner');
 let position = 0;

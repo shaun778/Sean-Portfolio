@@ -76,18 +76,21 @@
     /* flex: 0 0 80%;
     max-width: 80%; */
 }
-.story-container{
-    display: grid;
-    grid-template-rows: 1fr;
-    gap: 4rem;
+.main-story h4, li, p{
+    color: #6a6a6a;
 }
-.story-container ul{
+.main-story ul{
     display: grid;
     padding-left: 1.25rem;
     gap: 0.75rem;
 }
-.story-container h4, li, p{
-    color: #6a6a6a;
+.main-project-img{
+    height: 40vh !important; 
+}
+.story-container{
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 4rem;
 }
 .story-container img{
     width: 100%;
@@ -105,9 +108,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.125rem;
+    position: relative;
 }
 .s-image-groupe01 img{
     height: auto;
+    display: block;
 }
 .s-image-groupe02{
     display: grid;
@@ -140,6 +145,7 @@
     gap: 1.125rem;
 }
 .s-image-info img{
+    width: 100%;
     height: 300px;
 }
 .s-image-other{
@@ -148,8 +154,69 @@
     gap: 1.125rem;
 }
 .s-image-other img{
+    width: 100%;
     height: 300px;
 }
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.img-wrapper img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.625rem;
+}
+.zoom-icon {
+  display: flex;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-size: 24px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 10px;
+  padding: 6px;
+  cursor: pointer;
+  z-index: 2;
+}
+.img-popup {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  z-index: 999;
+}
+.img-popup.active {
+  display: flex;
+}
+.img-popup img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain; 
+  max-width: 100vw;
+  max-height: 100vh;
+  
+}
+.close-btn {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 8px;
+  line-height: 1;
+  z-index: 1000;
+  color: #000;
+  transition: background-color 0.3s;
+}
+
 
 
 /* Next-project */
@@ -284,12 +351,21 @@
 }
 
 @media (hover: hover){
+    .next-grid{
+        transition: transform 0.3s ease;
+    }
     .next-grid:hover{
         border-color: #000;
-        transition: transform 0.3s ease;
         transform: scale(1.05); 
     }
     .next-right:hover{
         color: #ffffff;
+    }
+    .zoom-icon{
+        transition: transform 0.3s ease;
+    }
+    .zoom-icon:hover{
+        transform: scale(1.2);
+        border: 1px solid #000; 
     }
 }

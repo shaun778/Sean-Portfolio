@@ -406,7 +406,7 @@ header a:hover{
 .image-container img{
     width: 100%;
     height: 100%;
-    height: 30vh;
+    height: 40vh;
     display: block;
     object-fit: cover;
 }
@@ -740,7 +740,7 @@ footer{
     .mobile-image{ 
         width: 100%; 
         max-width: 100%; 
-        height: 15vh; 
+        height: 20vh; 
         margin-bottom: 0.875rem;
         border-radius: 8px;
         object-fit: cover;
