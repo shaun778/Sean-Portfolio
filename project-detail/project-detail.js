@@ -168,3 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 使用節流版本的滾動監聽
         window.addEventListener('scroll', throttle(handleScroll, 16));
+
+
+        

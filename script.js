@@ -94,7 +94,7 @@ const data = {
   labels: ['UI','UXD', 'UXR', '前端','AI', 'A11y'],
   datasets: [{
     label: '熟練度',
-    data: [100, 100, 60, 50, 60, 80],
+    data: [100, 100, 75, 50, 60, 80],
     backgroundColor: 'rgba(206,206,206,0.3)',
     borderColor: 'rgba(0,0,0,0)',
     pointBackgroundColor: 'rgba(206,206,206,1)',
