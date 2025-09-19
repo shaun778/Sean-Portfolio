@@ -90,196 +90,196 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // 雷達分佈圖
-const data = {
-  labels: ['UI','UXD', 'UXR', '前端','AI', 'A11y'],
-  datasets: [{
-    label: '熟練度',
-    data: [100, 100, 75, 50, 60, 80],
-    backgroundColor: 'rgba(206,206,206,0.3)',
-    borderColor: 'rgba(0,0,0,0)',
-    pointBackgroundColor: 'rgba(206,206,206,1)',
-    pointBorderColor: '#fff',
-    pointRadius: 6
-  }]
-};
-const config = {
-  type: 'radar',
-  data: data,
-  options: {
-    scales: {
-      r: {
-        min: 0,
-        max: 100,
-        ticks: {
-          display: false,
-          stepSize: 35
-        },
-        angleLines: { color: '#BBB' },
-        grid: { color: '#d9d9d9' },
-        pointLabels: { 
-          font: { 
-            size: 18, 
-            weight: 'normal' }, 
-            color: '#222',
-          }
-      }
-    },
-    plugins: {
-      legend: { display: false }
-    }
-  }
-};
-new Chart(document.getElementById('myRadar'), config);
+// const data = {
+//   labels: ['UI','UXD', 'UXR', '前端','AI', 'A11y'],
+//   datasets: [{
+//     label: '熟練度',
+//     data: [100, 100, 75, 50, 60, 80],
+//     backgroundColor: 'rgba(206,206,206,0.3)',
+//     borderColor: 'rgba(0,0,0,0)',
+//     pointBackgroundColor: 'rgba(206,206,206,1)',
+//     pointBorderColor: '#fff',
+//     pointRadius: 6
+//   }]
+// };
+// const config = {
+//   type: 'radar',
+//   data: data,
+//   options: {
+//     scales: {
+//       r: {
+//         min: 0,
+//         max: 100,
+//         ticks: {
+//           display: false,
+//           stepSize: 35
+//         },
+//         angleLines: { color: '#BBB' },
+//         grid: { color: '#d9d9d9' },
+//         pointLabels: { 
+//           font: { 
+//             size: 18, 
+//             weight: 'normal' }, 
+//             color: '#222',
+//           }
+//       }
+//     },
+//     plugins: {
+//       legend: { display: false }
+//     }
+//   }
+// };
+// new Chart(document.getElementById('myRadar'), config);
 
 
 // --------------
 
 // 來自於合作夥伴的回饋 //
-(function () {
-  const feedbacks = [
-    {
-      text: [
-        "跨部門協作能力強：在與軟體溝通時很順暢，同時也能以品牌角度告知品牌原則協助找到 Middle Ground。",
-        "好眼力：自己有時候看不出哪裡跟設計稿不一樣，問他準沒錯，馬上一眼看穿。",
-        "幽默的好同事：自帶偶像圖體包袱的幽默感，工作過程時不時能提供歡樂。"
-      ],
-      author: "設計主管"
-    },
-    {
-      text: [
-        "謝謝專案上的幫忙與建議，希望你可以繼續保持專業跟細心，之後希望可以聽到你主動地分享自己的觀點和建議，一起讓專案有更多創新的用戶體驗~",
-        "1. 可以把專案相關協作的內容，理性的分析可行性跟提供作法建議",
-        "2. 在介面相關的設計，很認真的關注用戶體驗跟對細節的追求令人敬佩"
-      ],
-      author: "前端工程師"
-    },
-    {
-      text: [
-        "1. 懂得使用新的工具來減少前端與設計之間的語言隔閡，例如 Figma 的新功能或自行規劃的樣式標準。",
-        "2. 圖稿大部分都非常詳盡，在初期稿件規劃好的時候，也會先找前端討論這樣的 Use Flow 或 UI 會不會造成開發上的困難。"
-      ],
-      author: "前端工程師"
-    },
-    {
-      text: [
-        "具備同理心，會想辦法在協作上讓他人更輕鬆好溝通",
-        "會持續研究他人的做法，保持技術上的精進",
-        "希望 Sean 可以越來越厲害，有能力掌握更大的專案，但需要多多碰觸 UIUX 領域以外的東西，" +
-        "我自己會建議可以先從閱讀一些設計行銷類型的書，會對設計 UX 方面更有方向"
-      ],
-      author: "設計主管"
-    }
-  ];
+// (function () {
+//   const feedbacks = [
+//     {
+//       text: [
+//         "跨部門協作能力強：在與軟體溝通時很順暢，同時也能以品牌角度告知品牌原則協助找到 Middle Ground。",
+//         "好眼力：自己有時候看不出哪裡跟設計稿不一樣，問他準沒錯，馬上一眼看穿。",
+//         "幽默的好同事：自帶偶像圖體包袱的幽默感，工作過程時不時能提供歡樂。"
+//       ],
+//       author: "設計主管"
+//     },
+//     {
+//       text: [
+//         "謝謝專案上的幫忙與建議，希望你可以繼續保持專業跟細心，之後希望可以聽到你主動地分享自己的觀點和建議，一起讓專案有更多創新的用戶體驗~",
+//         "1. 可以把專案相關協作的內容，理性的分析可行性跟提供作法建議",
+//         "2. 在介面相關的設計，很認真的關注用戶體驗跟對細節的追求令人敬佩"
+//       ],
+//       author: "前端工程師"
+//     },
+//     {
+//       text: [
+//         "1. 懂得使用新的工具來減少前端與設計之間的語言隔閡，例如 Figma 的新功能或自行規劃的樣式標準。",
+//         "2. 圖稿大部分都非常詳盡，在初期稿件規劃好的時候，也會先找前端討論這樣的 Use Flow 或 UI 會不會造成開發上的困難。"
+//       ],
+//       author: "前端工程師"
+//     },
+//     {
+//       text: [
+//         "具備同理心，會想辦法在協作上讓他人更輕鬆好溝通",
+//         "會持續研究他人的做法，保持技術上的精進",
+//         "希望 Sean 可以越來越厲害，有能力掌握更大的專案，但需要多多碰觸 UIUX 領域以外的東西，" +
+//         "我自己會建議可以先從閱讀一些設計行銷類型的書，會對設計 UX 方面更有方向"
+//       ],
+//       author: "設計主管"
+//     }
+//   ];
 
-  let groupSize = window.innerWidth <= 375 ? 1 : 2;
-  let currentGroup = 0;
-  let totalGroups = Math.ceil(feedbacks.length / groupSize);
+//   let groupSize = window.innerWidth <= 375 ? 1 : 2;
+//   let currentGroup = 0;
+//   let totalGroups = Math.ceil(feedbacks.length / groupSize);
 
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
+//   const prevBtn = document.getElementById('prevBtn');
+//   const nextBtn = document.getElementById('nextBtn');
 
-  // --- RWD 監聽 ---
-  window.addEventListener('resize', function () {
-    const newSize = window.innerWidth >= 375 ? 1 : 1;
-    if (newSize !== groupSize) {
-      groupSize = newSize;
-      totalGroups = Math.ceil(feedbacks.length / groupSize);
-      currentGroup = 0;
-      const wrappers = document.querySelectorAll('.feedback-group-wrapper');
-      renderGroup(wrappers[0], currentGroup);
-      wrappers[0].classList.add('current');
-      wrappers[1].classList.remove('current');
-      wrappers[1].classList.add('next');
-      wrappers[1].innerHTML = '';
-      wrappers[0].style.transform = '';
-      wrappers[1].style.transform = '';
-      renderDots();
-      updateButtons();
-    }
-  });
+//   // --- RWD 監聽 ---
+//   window.addEventListener('resize', function () {
+//     const newSize = window.innerWidth >= 375 ? 1 : 1;
+//     if (newSize !== groupSize) {
+//       groupSize = newSize;
+//       totalGroups = Math.ceil(feedbacks.length / groupSize);
+//       currentGroup = 0;
+//       const wrappers = document.querySelectorAll('.feedback-group-wrapper');
+//       renderGroup(wrappers[0], currentGroup);
+//       wrappers[0].classList.add('current');
+//       wrappers[1].classList.remove('current');
+//       wrappers[1].classList.add('next');
+//       wrappers[1].innerHTML = '';
+//       wrappers[0].style.transform = '';
+//       wrappers[1].style.transform = '';
+//       renderDots();
+//       updateButtons();
+//     }
+//   });
 
-  function renderGroup(wrapper, groupIndex) {
-    wrapper.innerHTML = '';
-    const start = groupIndex * groupSize;
-    const end = start + groupSize;
-    feedbacks.slice(start, end).forEach(item => {
-      const div = document.createElement('div');
-      div.className = 'feedback-item';
-      // 正確處理多段文字
-      div.innerHTML = `
-        <div class="feedback-content">
-           ${item.text.map(line => `<p>${line}</p>`).join('')}
-        </div>
-        <span class="feedback-author">${item.author}</span>
-      `;
-      wrapper.appendChild(div);
-    });
-  }
+//   function renderGroup(wrapper, groupIndex) {
+//     wrapper.innerHTML = '';
+//     const start = groupIndex * groupSize;
+//     const end = start + groupSize;
+//     feedbacks.slice(start, end).forEach(item => {
+//       const div = document.createElement('div');
+//       div.className = 'feedback-item';
+//       // 正確處理多段文字
+//       div.innerHTML = `
+//         <div class="feedback-content">
+//            ${item.text.map(line => `<p>${line}</p>`).join('')}
+//         </div>
+//         <span class="feedback-author">${item.author}</span>
+//       `;
+//       wrapper.appendChild(div);
+//     });
+//   }
 
-  function renderDots() {
-    const dotsWrapper = document.querySelector('.dots');
-    if (!dotsWrapper) return;
-    dotsWrapper.innerHTML = '';
-    for (let i = 0; i < totalGroups; i++) {
-      const dot = document.createElement('div');
-      dot.className = 'dot' + (i === currentGroup ? ' active' : '');
-      dot.onclick = () => {
-        if (i === currentGroup) return;
-        const dir = i > currentGroup ? 'left' : 'right'; // 往後左滑，往前右滑
-        slideAndChange(i, dir);
-      };
-      dotsWrapper.appendChild(dot);
-    }
-  }
+//   function renderDots() {
+//     const dotsWrapper = document.querySelector('.dots');
+//     if (!dotsWrapper) return;
+//     dotsWrapper.innerHTML = '';
+//     for (let i = 0; i < totalGroups; i++) {
+//       const dot = document.createElement('div');
+//       dot.className = 'dot' + (i === currentGroup ? ' active' : '');
+//       dot.onclick = () => {
+//         if (i === currentGroup) return;
+//         const dir = i > currentGroup ? 'left' : 'right'; // 往後左滑，往前右滑
+//         slideAndChange(i, dir);
+//       };
+//       dotsWrapper.appendChild(dot);
+//     }
+//   }
 
-  function updateButtons() {
-    prevBtn.disabled = currentGroup === 0;
-    nextBtn.disabled = currentGroup === totalGroups - 1;
-    prevBtn.classList.toggle('disabled', prevBtn.disabled);
-    nextBtn.classList.toggle('disabled', nextBtn.disabled);
-  }
+//   function updateButtons() {
+//     prevBtn.disabled = currentGroup === 0;
+//     nextBtn.disabled = currentGroup === totalGroups - 1;
+//     prevBtn.classList.toggle('disabled', prevBtn.disabled);
+//     nextBtn.classList.toggle('disabled', nextBtn.disabled);
+//   }
 
-  function slideAndChange(nextIndex, direction) {
-    if (nextIndex < 0 || nextIndex >= totalGroups || nextIndex === currentGroup) return;
-    const currentWrapper = document.querySelector('.feedback-group-wrapper.current');
-    const nextWrapper = document.querySelector('.feedback-group-wrapper.next');
-    renderGroup(nextWrapper, nextIndex);
+//   function slideAndChange(nextIndex, direction) {
+//     if (nextIndex < 0 || nextIndex >= totalGroups || nextIndex === currentGroup) return;
+//     const currentWrapper = document.querySelector('.feedback-group-wrapper.current');
+//     const nextWrapper = document.querySelector('.feedback-group-wrapper.next');
+//     renderGroup(nextWrapper, nextIndex);
 
-    // 根據傳入方向設定位移（固定規則不變）
-    const from = direction === 'left' ? '100%' : '-100%';  // 新頁初始位置
-    const to   = direction === 'right' ? '-100%' : '100%';  // 舊頁滑出的方向
+//     // 根據傳入方向設定位移（固定規則不變）
+//     const from = direction === 'left' ? '100%' : '-100%';  // 新頁初始位置
+//     const to   = direction === 'right' ? '-100%' : '100%';  // 舊頁滑出的方向
 
-    nextWrapper.style.transform = `translateX(${from})`;
-    void nextWrapper.offsetWidth;
-    currentWrapper.style.transform = `translateX(${to})`;
-    nextWrapper.style.transform    = 'translateX(0)';
+//     nextWrapper.style.transform = `translateX(${from})`;
+//     void nextWrapper.offsetWidth;
+//     currentWrapper.style.transform = `translateX(${to})`;
+//     nextWrapper.style.transform    = 'translateX(0)';
 
-    setTimeout(() => {
-      currentWrapper.classList.remove('current');
-      currentWrapper.classList.add('next');
-      currentWrapper.style.transform = `translateX(${from})`;
-      nextWrapper.classList.remove('next');
-      nextWrapper.classList.add('current');
-      currentGroup = nextIndex;
-      renderDots();
-      updateButtons();
-    }, 500);
-  }
+//     setTimeout(() => {
+//       currentWrapper.classList.remove('current');
+//       currentWrapper.classList.add('next');
+//       currentWrapper.style.transform = `translateX(${from})`;
+//       nextWrapper.classList.remove('next');
+//       nextWrapper.classList.add('current');
+//       currentGroup = nextIndex;
+//       renderDots();
+//       updateButtons();
+//     }, 500);
+//   }
 
-  // --- 初始化 ---
-  document.addEventListener("DOMContentLoaded", function () {
-    const wrappers = document.querySelectorAll('.feedback-group-wrapper');
-    renderGroup(wrappers[0], currentGroup);
-    wrappers[0].classList.add('current');
-    wrappers[1].classList.add('next');
-    renderDots();
-    updateButtons();
+//   // --- 初始化 ---
+//   document.addEventListener("DOMContentLoaded", function () {
+//     const wrappers = document.querySelectorAll('.feedback-group-wrapper');
+//     renderGroup(wrappers[0], currentGroup);
+//     wrappers[0].classList.add('current');
+//     wrappers[1].classList.add('next');
+//     renderDots();
+//     updateButtons();
 
-    // 固定方向，不因 index 判斷而變化
-    prevBtn.onclick = () => slideAndChange(currentGroup - 1, 'right');
-    nextBtn.onclick = () => slideAndChange(currentGroup + 1, 'left');
-  });
-})();
+//     // 固定方向，不因 index 判斷而變化
+//     prevBtn.onclick = () => slideAndChange(currentGroup - 1, 'right');
+//     nextBtn.onclick = () => slideAndChange(currentGroup + 1, 'left');
+//   });
+// })();
 
 
 // ========== 進度條 & 內容區切換 ==========
