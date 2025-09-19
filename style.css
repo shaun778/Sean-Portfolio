@@ -302,6 +302,8 @@ header a:hover{
 .header-link{
     text-align: center;
     padding: 40px;
+    font-size: 0.875rem;
+    color: #6a6a6a;
 }        
 .header-link svg {
     vertical-align: middle;
