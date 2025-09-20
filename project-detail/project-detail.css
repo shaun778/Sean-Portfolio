@@ -129,6 +129,22 @@
     gap: 1.125rem;
     width: 100%;
 }
+.story-center{
+    padding: 80px;
+    margin-bottom: 80px;
+    background: #333;
+    border-radius: 10px;
+}
+.sp-h5{
+    text-align: center;
+    padding: 12px;
+    color: #FDFDFD;
+}
+.story-center h1{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
 .design01 video, .design02 video, .design03 video{
     border: 1px solid #D9D9D9;
     width: 100%;
@@ -407,6 +423,135 @@
 }
 
 
+         /* 數據展示區塊 */
+        .data-showcase {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            width: 100%;
+        }
+
+        .info-panel {
+            color: #ffffff;
+        }
+
+        .intro-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #6a6a6a;
+            font-weight: 400;
+        }
+
+        .metric-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .counter-box {
+            background: #000;
+            border-radius: 20px;
+            padding: 32px 32px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .counter-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+        }
+
+        .counter-value {
+            font-size: 48px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .counter-title {
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 400;
+        }
+        
+ /* 滿意度分析區塊 */
+        .sa-analysis-section {
+            color: #ffffff;
+        }
+
+        .sa-analysis-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sa-section-label {
+            font-size: 14px;
+            color: #a5a5a5;
+            margin-bottom: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .sa-main-title {
+            color: #000;
+            font-size: 2.5rem;
+            padding-bottom: 0.78rem;
+        }
+
+        .sa-sub-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            line-height: 1.3;
+        }
+
+        .sa-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #6a6a6a;
+            margin-bottom: 40px;
+        }
+
+        /* 卡片容器 */
+        .sa-cards-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 80px;
+        }
+
+        .sa-analysis-card {
+            background: #000;
+            border-radius: 20px;
+            padding: 32px 24px;
+            position: relative;
+        }
+        .sa-analysis-card ul{
+            padding-left: 0px;
+            gap: 18px;
+        }
+
+        .sa-points-list {
+            list-style: none;
+        }
+
+        .sa-point-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        .sa-point-text {
+            color: #e0e0e0;
+            flex: 1;
+        }
+
+
 @media screen and (max-width: 375px){
     .story-content h1, .s-problem h1, .s-solution01 h1, 
     .s-solution02 h1, .d-process h1, .design01 h1, .design02 h1, 
@@ -511,7 +656,24 @@
 .phone-section{
     padding-bottom: 60px;
 }
+.intro-text{
+    padding-bottom: 40px;
 }
+.content-wrapper{
+    display: block;
+}
+.story-center{
+    padding: 24px;
+}
+.sa-main-title{
+    font-size: 28px;
+}
+.sa-cards-container{
+    grid-template-columns: 1fr;
+}
+}
+
+
 
 @media (hover: hover){
     .next-grid{

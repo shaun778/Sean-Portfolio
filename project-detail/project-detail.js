@@ -169,5 +169,129 @@ document.addEventListener('DOMContentLoaded', () => {
         // 使用節流版本的滾動監聽
         window.addEventListener('scroll', throttle(handleScroll, 16));
 
+// 數據展示 //
 
-        
+        class AnimatedCounter {
+            constructor() {
+                this.numberElements = document.querySelectorAll('.counter-value');
+                this.showcaseSection = document.getElementById('dataShowcase');
+                this.observer = null;
+                this.isAnimating = false;
+                this.hasAnimated = false;
+                
+                this.initObserver();
+            }
+
+            initObserver() {
+                // 創建 Intersection Observer
+                this.observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // 當區塊進入視窗時開始動畫
+                            if (!this.isAnimating) {
+                                this.startAnimation();
+                            }
+                        } else {
+                            // 當區塊離開視窗時重置狀態
+                            this.resetCounters();
+                        }
+                    });
+                }, {
+                    threshold: 0.3, // 當30%的區塊可見時觸發
+                    rootMargin: '0px 0px -100px 0px' // 稍微延遲觸發
+                });
+
+                this.observer.observe(this.showcaseSection);
+            }
+
+            startAnimation() {
+                this.isAnimating = true;
+                this.showcaseSection.classList.add('slide-up');
+
+                this.numberElements.forEach((element, index) => {
+                    const target = parseInt(element.getAttribute('data-target'));
+                    
+                    // 添加延遲使動畫更有層次感
+                    setTimeout(() => {
+                        this.animateNumber(element, target);
+                    }, index * 200);
+                });
+            }
+
+            animateNumber(element, target) {
+                const duration = 2000; // 動畫持續時間 2 秒
+                const stepTime = 16; // 約 60fps
+                const steps = duration / stepTime;
+                const increment = target / steps;
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    
+                    if (current >= target) {
+                        element.textContent = target.toLocaleString();
+                        clearInterval(timer);
+                        
+                        // 檢查是否所有計數器都完成
+                        this.checkAnimationComplete();
+                    } else {
+                        element.textContent = Math.floor(current).toLocaleString();
+                    }
+                }, stepTime);
+
+                // 添加數字更新時的微妙效果
+                element.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    element.style.transform = 'scale(1)';
+                    element.style.transition = 'transform 0.1s ease';
+                }, 100);
+            }
+
+            checkAnimationComplete() {
+                const allCompleted = Array.from(this.numberElements).every(element => {
+                    const target = parseInt(element.getAttribute('data-target'));
+                    const current = parseInt(element.textContent.replace(/,/g, ''));
+                    return current === target;
+                });
+
+                if (allCompleted) {
+                    setTimeout(() => {
+                        this.isAnimating = false;
+                    }, 500);
+                }
+            }
+
+            resetCounters() {
+                if (!this.isAnimating) {
+                    this.numberElements.forEach(element => {
+                        element.textContent = '0';
+                        element.style.transform = 'scale(1)';
+                        element.style.transition = 'none';
+                    });
+                    this.showcaseSection.classList.remove('slide-up');
+                }
+            }
+
+            // 銷毀觀察器
+            destroy() {
+                if (this.observer) {
+                    this.observer.disconnect();
+                }
+            }
+        }
+
+        // 當頁面載入完成後初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedCounter = new AnimatedCounter();
+            
+            // 可選：在頁面卸載時清理
+            window.addEventListener('beforeunload', () => {
+                animatedCounter.destroy();
+            });
+        });
+
+        // 平滑滾動效果（可選）
+        document.addEventListener('DOMContentLoaded', () => {
+            // 為頁面添加平滑滾動
+            document.documentElement.style.scrollBehavior = 'smooth';
+        });
